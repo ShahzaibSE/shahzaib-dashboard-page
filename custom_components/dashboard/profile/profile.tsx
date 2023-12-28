@@ -13,7 +13,7 @@ export const more_options = [
 
 export default function Profile() {
   return (
-    <div className="hidden xl:flex xl:flex-col p-2 justify-between bg-[#20262C] min-h-screen xl:w-4/12 xl:max-w-80">
+    <div className="hidden xl:flex xl:flex-col xl:p-2 xl:justify-start xl:gap-32 bg-[#20262C] xl:h-dvh xl:w-4/12 xl:max-w-80">
       <div>
         <Customer />
       </div>

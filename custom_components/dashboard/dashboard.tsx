@@ -4,6 +4,7 @@ import DashboardAdCard, {
   DashboardAdModel,
 } from "./dashboard_ad_card";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import OrderList from "./order/order_list";
 
 const dashboard_ads: DashboardAdModel[] = [
   {
@@ -25,14 +26,14 @@ const dashboard_ads: DashboardAdModel[] = [
 
 export default function Dashboard() {
   return (
-    <div className="flex lg:flex-row">
+    <div className="flex flex-col xl:gap-6 xl:flex-row xl:max-h-dvh">
       <Profile />
       <div className="flex flex-col justify-between gap-4 p-6 w-full xl:w-2/4">
         <h1 className="text-lg font-bold">
           Dashboard
         </h1>
-        <div className="flex flex-col justify-between">
-          <ScrollArea className="h-3/4">
+        <div className="flex flex-col justify-between xl:max-h-dvh">
+          <ScrollArea className="h-2/3">
             <div className="flex flex-col justify-between gap-4">
               {dashboard_ads.map(
                 (
@@ -50,7 +51,7 @@ export default function Dashboard() {
           </ScrollArea>
         </div>
       </div>
-      <div></div>
+      <OrderList />
     </div>
   );
 }
